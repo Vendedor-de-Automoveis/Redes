@@ -5,7 +5,7 @@ Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Re
 
 <details><summary><h3>Da Organização</h3></summary>
   
-
+  <br>
     
     O presente repositório está organizado em duas partes principais: 'AlgoritmosGeneticos' e 'RedesNeurais'. Estas pastas representam o tipo de conteúdo abordado ao decorrer da disciplina. Dentro delas, encontrarão exeperimentos numerados. Dirigir-se à aba desejada para mais informações sobre os mesmos.
     
@@ -13,7 +13,8 @@ Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Re
 
 <details><summary><h3>Algoritmos Genéticos</h3></summary>
   
-
+  <br>
+    
 Nota: Tópico em construção
     
     experimento A.01 - busca aleatoria:
