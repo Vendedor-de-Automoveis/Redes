@@ -36,12 +36,10 @@ Nota: Tópico em construção
 <p>coisa
 </p>
 </details>   
-    
 <details><summary><h5>Experimento A.05 - Descobrindo a Senha:</h5></summary>
 <p>coisa
 </p>
 </details>
-    
 <details><summary><h5>Experimento A.06 - O Caixiero Viajante:</h5></summary>
 <p>coisa
 </p>
