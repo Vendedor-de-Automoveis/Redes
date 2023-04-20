@@ -1,16 +1,32 @@
-# Template para a disciplina de Redes Neurais e Algoritmos Genéticos
+# Redes Neurais e Algoritmos Genéticos
 
-Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
+Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Redes Neurais e Algoritmos Genéticos" do curso Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência.
 
-Lembretes:
 
-+ Cada notebook deve ter apenas um experimento
-+ Jamais faça importações utilizando o asterisco. Use espaços de nome ou importe apenas o que for usar no seu experimento
-+ Códigos bem formatados são recomendados. Sugestão: use o formatador black. Ele tem uma versão online disponível em https://black.vercel.app
-+ Sempre use nomes claros e representativos para suas funções, classes, métodos e variáveis
-+ Sempre escreva uma docstring nas suas funções, classes e métodos
-+ Funções simples podem ter doscrings em uma linha. As demais funções devem ter docstrings completas
-+ Comente seu código sempre que julgar necessário, principalmente quando o que estiver sendo executado não for trivial
-+ Todos os notebooks devem funcionar corretamente seguindo a ordem de cima para baixo. Evite rodar células fora da ordem para evitar problemas de continuidade no seu experimento (reordene as células caso seja necessário)
-+ Certifique-se que todas as células do seus notebooks foram executadas! Afinal, como você vai realizar seu experimento sem executar as células?
-+ Reescreva os README do seu repositório para guiar o leitor
+<details><summary><h3>Da Organização</h3></summary>
+  
+  <br>
+    
+   O presente repositório está organizado em duas partes principais: 'AlgoritmosGeneticos' e 'RedesNeurais'. Estas pastas representam o tipo de conteúdo abordado ao decorrer da disciplina. Dentro delas, encontrarão exeperimentos numerados. Dirigir-se à aba desejada para mais informações sobre os mesmos.
+    
+</details>
+
+<details><summary><h3>Experimentos de Algoritmos Genéticos</h3></summary>
+  
+  <br>
+    
+Nota: Tópico em construção
+    
+    Experimento A.01 - Busca Aleatoria:
+    Experimento A.02 - Busca em Grade:
+    Experimento A.03 - Algoritmo Genético:
+    Experimento A.04 - Caixas Não Binária:
+    Experimento A.05 - Descobrindo a Senha:
+    Experimento A.06 - O Caixiero Viajante:
+    Experimento A.07 - Aplicando Restrições:
+    
+    Experimento GA.03 - O Caixeiro com Gasolina Infinita:
+    
+    
+    
+</details>
