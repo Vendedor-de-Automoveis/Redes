@@ -17,16 +17,23 @@ Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Re
     
 Nota: Tópico em construção
     
-    Experimento A.01 - Busca Aleatoria:
-    Experimento A.02 - Busca em Grade:
-    Experimento A.03 - Algoritmo Genético:
-    Experimento A.04 - Caixas Não Binária:
-    Experimento A.05 - Descobrindo a Senha:
-    Experimento A.06 - O Caixiero Viajante:
-    Experimento A.07 - Aplicando Restrições:
-    
-    Experimento GA.03 - O Caixeiro com Gasolina Infinita:
+<details><summary><h5>Experimento A.01 - Busca Aleatoria:</h5></summary>
     
     
+<details><summary><h5>Experimento A.02 - Busca em Grade:</h5></summary>
+    
+    
+<details><summary><h5>Experimento A.03 - Algoritmo Genético:</h5></summary>
+    
+    
+<details><summary><h5>Experimento A.04 - Caixas Não Binária:</h5></summary>
+    
+<details><summary><h5>Experimento A.05 - Descobrindo a Senha:</h5></summary>
+    
+<details><summary><h5>Experimento A.06 - O Caixiero Viajante:</h5></summary>
+    
+<details><summary><h5>Experimento A.07 - Aplicando Restrições:</h5></summary>
+    
+<details><summary><h5>Experimento GA.03 - O Caixeiro com Gasolina Infinita:</h5></summary>
     
 </details>
