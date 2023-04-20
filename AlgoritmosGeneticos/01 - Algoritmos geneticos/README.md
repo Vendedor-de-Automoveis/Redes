@@ -18,21 +18,53 @@ Um algoritmo genético começa com uma população de soluções candidatas gera
     
 Nota: Tópico em construção
     
-<details><summary><h5>Experimento A.01 - Busca Aleatoria:</h5></summary></details>
+<details><summary><h3>Experimentos de Algoritmos Genéticos</h3></summary>
+  
+  <br>
     
-<details><summary><h5>Experimento A.02 - Busca em Grade:</h5></summary></details>
+Nota: Tópico em construção
     
-<details><summary><h5>Experimento A.03 - Algoritmo Genético:</h5></summary></details>
+<details><summary><b>Experimento A.01 - Busca Aleatoria:</b></summary>
+<p>coisa
+</p>
+</details>  
     
-<details><summary><h5>Experimento A.04 - Caixas Não Binária:</h5></summary></details>  
+<details><summary><b>Experimento A.02 - Busca em Grade:</b></summary>
+<p>coisa
+</p>
+</details>
     
-<details><summary><h5>Experimento A.05 - Descobrindo a Senha:</h5></summary></details>  
+<details><summary><b>Experimento A.03 - Algoritmo Genético:</b></summary>
+<p>coisa
+</p>
+</details>
     
-<details><summary><h5>Experimento A.06 - O Caixiero Viajante:</h5></summary></details>
+<details><summary><b>Experimento A.04 - Caixas Não Binária:</b></summary>
+<p>coisa
+</p>
+</details>   
     
-<details><summary><h5>Experimento A.07 - Aplicando Restrições:</h5></summary></details>
+<details><summary><b>Experimento A.05 - Descobrindo a Senha:</b></summary>
+<p>coisa
+</p>
+</details>
     
-<details><summary><h5>Experimento GA.03 - O Caixeiro com Gasolina Infinita:</h5></summary></details>
+<details><summary><b>Experimento A.06 - O Caixiero Viajante:</b></summary>
+<p>coisa
+</p>
+</details>
+    
+<details><summary><b>Experimento A.07 - Aplicando Restrições:</b></summary>
+<p>coisa
+</p>
+</details>
+    
+<br>
+    
+<details><summary><b>Experimento GA.03 - O Caixeiro com Gasolina Infinita:</b></summary>
+<p>coisa
+</p>
+</details>
     
 
     

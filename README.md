@@ -21,6 +21,7 @@ Nota: Tópico em construção
 <p>coisa
 </p>
 </details>  
+    
 <details><summary><b>Experimento A.02 - Busca em Grade:</b></summary>
 <p>coisa
 </p>
@@ -30,10 +31,12 @@ Nota: Tópico em construção
 <p>coisa
 </p>
 </details>
+    
 <details><summary><b>Experimento A.04 - Caixas Não Binária:</b></summary>
 <p>coisa
 </p>
 </details>   
+    
 <details><summary><b>Experimento A.05 - Descobrindo a Senha:</b></summary>
 <p>coisa
 </p>
@@ -49,6 +52,8 @@ Nota: Tópico em construção
 </p>
 </details>
     
+<br>
+        
 <details><summary><b>Experimento GA.03 - O Caixeiro com Gasolina Infinita:</b></summary>
 <p>coisa
 </p>
