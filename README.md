@@ -1,4 +1,4 @@
-# Redes Neurais e Algoritmos Genéticos
+ # Redes Neurais e Algoritmos Genéticos
 
 Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Redes Neurais e Algoritmos Genéticos" do curso Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência.
 
@@ -18,17 +18,17 @@ Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Re
 Nota: Tópico em construção
     
 <details><summary><b>Experimento A.01 - Busca Aleatoria:</b></summary>
-<p>coisa
+<p> Este experimento consiste em aprender o que são genes, indivíduos e populações. Nele, criamos uma população de forma aleatória e aplicamos uma métrica sobre os indivíduos para observar se um indivíduo bom foi criado pelo mero acaso. Entenda indivíduo bom como aquele que chega mais próximo da métrica ideal (nesse caso é um problema de maximização, ou seja, procuramos o com a maior métrica).
 </p>
 </details>  
     
 <details><summary><b>Experimento A.02 - Busca em Grade:</b></summary>
-<p>coisa
+<p> Este experimento consiste em continuar o problema abordado em A.01, no entanto, aqui utilizamos uma busca em grade (determinística) ao invés do mero acaso para procurar um indivíduo bom. Entenda indivíduo bom como aquele que chega mais próximo da métrica ideal (nesse caso é um problema de maximização, ou seja, procuramos o com a maior métrica).
 </p>
 </details>
     
 <details><summary><b>Experimento A.03 - Algoritmo Genético:</b></summary>
-<p>coisa
+<p> Este experimento consiste em uma introdução aos algoritmos genéticos. Nele utilizamos esse tipo de algoritmo para procurar um conjunto de genes que maximizam uma métrica: O valor total da soma dos genes, para cada indivíduo. Com isso, procuramos selecionar apenas os indivíduos que apresetam a melhor métrica da população, por um número N de gerações com a esperança de encontrarmos o melhor indivíduo possível no final (ou pelo menos um indivíduo razoável). 
 </p>
 </details>
     
