@@ -18,18 +18,7 @@ import itertools
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.01 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
-def func_objetivo_cb(indv):
-    '''Computa uma métrica do objetivo do problema.
-    
-    Args:
-    indv: uma lista que contém os genes, indivíduo
-    
-    return:
-        soma dos genes dos indivíduos.
-    '''
-    return sum(indv)
-
-
+#Função Gene
 def func_gene_cb():
     '''Gera um gene válido para o problema das caixas binárias.
     
@@ -41,7 +30,8 @@ def func_gene_cb():
     gene = random.choice(lista)
     return gene
     
-    
+
+#Função Indivíduo
 def func_indviduo_cb(n):
     '''Gera um indíviduo para o problema.
     
@@ -58,10 +48,43 @@ def func_indviduo_cb(n):
     return indv
 
 
+#Função Objetivo
+def func_objetivo_cb(indv):
+    '''Computa uma métrica do objetivo do problema das caixas binárias.
+    
+    Args:
+    indv: uma lista que contém os genes, indivíduo
+    
+    return:
+        soma dos genes dos indivíduos.
+    '''
+    
+    fitness = sum(indv)
+    return fitness
+
+
+#############################################################################
+' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.02 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
+#############################################################################
+"""
+Não utiliza funções deste arquivo
+"""
+
 #############################################################################
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.03 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
+#Função Gene
+"""
+Conforme Experimento A.01
+"""
+
+#Função Indivíduo
+"""
+Conforme Experiento A.01
+"""
+
+#Função População
 def func_populacao_cb(TAMANHO_POP, n):
     '''Cria uma população para o problema das caixas binárias
     
@@ -79,6 +102,7 @@ def func_populacao_cb(TAMANHO_POP, n):
     return populacao
                          
 
+#Função Seleção 
 def func_selecao_roleta_max(populacao, fitness):
     '''Seleciona individuos para uma população usando o método de roleta.
     
@@ -95,24 +119,8 @@ def func_selecao_roleta_max(populacao, fitness):
     populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
     return populacao_selecionada
                                                                             
-                                           
-def func_objetivo_pop_cb(populacao):
-    '''Calcula a funcao objetivo para todos os indivíduos de uma população.
-    
-    Args:
-    populacao: lista com todos os indivídos de uma popuplção
-    
-    retun:
-        Lista de valores representando a fitness de cada  indivíduo da população
-        
-    '''
-    fitness = []
-    for indv in populacao:
-        fobj = func_objetivo_cb(indv)
-        fitness.append(fobj)
-    return fitness
-
-
+                            
+#Função Cruzamento
 def func_cruzamento_ponto_simples(pai, mae):
     '''Operador de cruzamento de ponto simples.
     
@@ -130,7 +138,9 @@ def func_cruzamento_ponto_simples(pai, mae):
     filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
     
     return filho1, filho2
+  
     
+#Função Mutação    
 def func_mutacao_cb(indv):
     '''Realiza a mutacao de um gene no problema das caixas binárias
     
@@ -146,11 +156,30 @@ def func_mutacao_cb(indv):
     return indv
 
 
+#Função Objetivo
+def func_objetivo_pop_cb(populacao):
+    '''Calcula a funcao objetivo para todos os indivíduos de uma população.
+    
+    Args:
+    populacao: lista com todos os indivídos de uma popuplção
+    
+    retun:
+        Lista de valores representando a fitness de cada  indivíduo da população
+        
+    '''
+    fitness = []
+    for indv in populacao:
+        fobj = func_objetivo_cb(indv)
+        fitness.append(fobj)
+    return fitness
+
+
 
 #############################################################################
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.04 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
+#Função Gene
 def func_gene_cnb(valor_max_caixa_cnb):
     '''Gera um gene válido para o problema das caixas não binárias.
     
@@ -164,6 +193,7 @@ def func_gene_cnb(valor_max_caixa_cnb):
     return gene
     
     
+#Função Invivíduo
 def func_indviduo_cnb(n, valor_max_caixa_cnb):
     '''Gera um indíviduo para o problema das caixas não binárias.
     
@@ -180,54 +210,8 @@ def func_indviduo_cnb(n, valor_max_caixa_cnb):
         indv.append(gene)
     return indv
 
-def func_populacao_cnb(TAMANHO_POP, n, valor_max_caixa_cnb):
-    '''Cria uma população para o problema das caixas não binárias
-    
-    Args:
-    TAMANHO_POP: tamanho da população
-    NUM_GENES: numero de genes
-    valor_max_caixa_cnb: valor máximo que a caixa pode assumir
 
-    
-    return:
-        Uma lista onde cada item é um indivíduo. Indivíduo é um conjunto de genes
-    '''
-    populacao = []
-    for _ in range(TAMANHO_POP):
-        indv= func_indviduo_cnb(n, valor_max_caixa_cnb)
-        populacao.append(indv)
-    return populacao
-                                                                        
-                     
-def func_objetivo_cnb(indv):
-    '''Computa uma métrica do objetivo do problema das caixas não binárias.
-    
-    Args:
-    indv: uma lista que contém os genes, indivíduo
-    
-    return:
-        soma dos genes dos indivíduos.
-    '''
-    fitness = sum(indv)
-    return fitness
-
-    
-def func_objetivo_pop_cnb(populacao):
-    '''Calcula a funcao objetivo para todos os indivíduos de uma população no problema das caixas não binárias.
-    
-    Args:
-    populacao: lista com todos os indivídos de uma popuplção
-    
-    retun:
-        Lista de valores representando o fitness de cada indivíduo da população.
-        
-    '''
-    fitness_pop = []
-    for indv in populacao:
-        fobj = func_objetivo_cnb(indv)
-        fitness_pop.append(fobj)
-    return fitness_pop
-
+#Função Mutação
 def func_mutacao_cnb(indv, valor_max_caixa_cnb):
     '''Realiza a mutacao de um gene no problema das caixas não binárias
     
@@ -242,6 +226,38 @@ def func_mutacao_cnb(indv, valor_max_caixa_cnb):
     gene_a_ser_mutado = random.randint(0, len(indv)-1)
     indv[gene_a_ser_mutado] = func_gene_cnb(valor_max_caixa_cnb)
     return indv
+                                                                        
+
+#Função Objetivo
+def func_objetivo_cnb(indv):
+    '''Computa uma métrica do objetivo do problema das caixas não binárias.
+    
+    Args:
+    indv: uma lista que contém os genes, indivíduo
+    
+    return:
+        soma dos genes dos indivíduos.
+    '''
+    fitness = sum(indv)
+    return fitness
+
+
+#Função Objetivo da População
+def func_objetivo_pop_cnb(populacao):
+    '''Calcula a função objetivo para todos os indivíduos de uma população no problema das caixas não binárias.
+    
+    Args:
+    populacao: lista com todos os indivídos de uma popuplção
+    
+    retun:
+        Lista de valores representando o fitness de cada indivíduo da população.
+        
+    '''
+    fitness_pop = []
+    for indv in populacao:
+        fobj = func_objetivo_cnb(indv)
+        fitness_pop.append(fobj)
+    return fitness_pop
 
 
 
@@ -249,37 +265,19 @@ def func_mutacao_cnb(indv, valor_max_caixa_cnb):
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.05 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
-"""
-testes iniciais
-
-def funca_converte_senha_txt(senha):
-    '''Converte a senha textual em valores numéricos reais
-    #vou utilizar '0' como sendo separador de algarismo, visto que o alfabeto tem 27 letras e pode ser necessário utilizar um número com dezena para representar uma única letra.
-    
+#Função Gene
+def gene_letra(letras):
+    """Sorteia uma letra.
     Args:
-    senha: a senha correta
-    
-    return:
-        Uma senha numérica
-    
-    '''
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Retorna uma letra dentro das possíveis de serem sorteadas.
+    """
+    letra = random.choice(letras)
+    return letra
 
-    for caractere in senha:
-        numero = ord(caractere)
-        print(f"O caractere '{caractere}' converte para o número {numero}")
 
-def func_objetivo_senha_txt():
-    '''Computa uma métrica do problema da senha semi-secreta textual
-
-    Args:
-    senha-indv: senha-individuo, um conjunto de genes representando o palpite da senha
-    senha: a senha correta
-    
-    return:
-        A distância entre a senha correta e a senha-individuo
-    '''
-"""
-
+#Função Indivíduo
 def individuo_senha(tamanho_senha, letras):
     """Cria um candidato para o problema da senha
     Args:
@@ -296,16 +294,8 @@ def individuo_senha(tamanho_senha, letras):
 
     return candidato
 
-def gene_letra(letras):
-    """Sorteia uma letra.
-    Args:
-      letras: letras possíveis de serem sorteadas.
-    Return:
-      Retorna uma letra dentro das possíveis de serem sorteadas.
-    """
-    letra = random.choice(letras)
-    return letra
 
+#Função População
 def populacao_inicial_senha(tamanho, tamanho_senha, letras):
     """Cria população inicial no problema da senha
     Args
@@ -320,6 +310,8 @@ def populacao_inicial_senha(tamanho, tamanho_senha, letras):
         populacao.append(individuo_senha(tamanho_senha, letras))
     return populacao
 
+
+#Função Objetivo
 def funcao_objetivo_senha(individuo, senha_verdadeira):
     """Computa a funcao objetivo de um individuo no problema da senha
     Args:
@@ -337,21 +329,8 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
 
     return diferenca
 
-def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
-    """Computa a funcao objetivo de uma populaçao no problema da senha.
-    Args:
-      populacao: lista com todos os individuos da população
-      senha_verdadeira: a senha que você está tentando descobrir
-    Returns:
-      Lista contendo os valores da métrica de distância entre senhas.
-    """
-    resultado = []
 
-    for individuo in populacao:
-        resultado.append(funcao_objetivo_senha(individuo, senha_verdadeira))
-
-    return resultado
-
+#Função Seleção
 def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
     """Faz a seleção de uma população usando torneio.
     Nota: da forma que está implementada, só funciona em problemas de
@@ -389,6 +368,8 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
 
     return selecionados
 
+
+#Função Mutação
 def mutacao_senha(individuo, letras):
     """Realiza a mutação de um gene no problema da senha.
     Args:
@@ -401,6 +382,8 @@ def mutacao_senha(individuo, letras):
     individuo[gene] = gene_letra(letras)
     return individuo
 
+
+#Função Cruzamento
 def cruzamento_ponto_simples(pai, mae):
     """Operador de cruzamento de ponto simples.
     Args:
@@ -418,32 +401,29 @@ def cruzamento_ponto_simples(pai, mae):
     return filho1, filho2
 
 
+#Função Objetivo
+def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
+    """Computa a funcao objetivo de uma populaçao no problema da senha.
+    Args:
+      populacao: lista com todos os individuos da população
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      Lista contendo os valores da métrica de distância entre senhas.
+    """
+    resultado = []
+
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_senha(individuo, senha_verdadeira))
+
+    return resultado
+
 
 #############################################################################
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.06 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
-def distancia_entre_dois_pontos(a, b):
-    """Computa a distância Euclidiana entre dois pontos em R^2
-    Args:
-      a: lista contendo as coordenadas x e y de um ponto.
-      b: lista contendo as coordenadas x e y de um ponto.
-    Returns:
-      Distância entre as coordenadas dos pontos `a` e `b`.
-    """
-
-    x1 = a[0]
-    x2 = b[0]
-    y1 = a[1]
-    y2 = b[1]
-
-    dist = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** (1 / 2)
-
-    return dist
-
-
-# NOVIDADE
-def cria_cidades(n):
+#Função Genoma
+def cria_cidades_em_r2(n):
     """Cria um dicionário aleatório de cidades com suas posições (x,y).
     Args:
       n: inteiro positivo
@@ -460,6 +440,8 @@ def cria_cidades(n):
 
     return cidades
 
+
+#Função Indivíduo
 def individuo_cv(cidades):
     """Sorteia um caminho possível no problema do caixeiro viajante
     Args:
@@ -474,6 +456,8 @@ def individuo_cv(cidades):
     random.shuffle(nomes)
     return nomes
 
+
+#Função População
 def populacao_inicial_cv(tamanho, cidades):
     """Cria população inicial no problema do caixeiro viajante.
     Args
@@ -492,6 +476,7 @@ def populacao_inicial_cv(tamanho, cidades):
     return populacao
 
 
+#Função Cruzamento
 def cruzamento_ordenado(pai, mae):
     """Operador de cruzamento ordenado.
     Neste cruzamento, os filhos mantém os mesmos genes que seus pais tinham,
@@ -522,6 +507,13 @@ def cruzamento_ordenado(pai, mae):
             
     return filho1, filho2         
     
+#Função Seleção
+"""
+Conforme Experimento A.05
+"""
+
+
+#Função mutação
 def mutacao_de_troca(individuo):
     """Troca o valor de dois genes.
     Args:
@@ -540,6 +532,8 @@ def mutacao_de_troca(individuo):
     
     return individuo
     
+    
+#Função Objetivo
 def funcao_objetivo_cv(individuo, cidades):
     """Computa a funcao objetivo de um individuo no problema do caixeiro viajante.
     Args:
@@ -573,6 +567,8 @@ def funcao_objetivo_cv(individuo, cidades):
     
     return distancia
 
+
+#Função Objetivo População
 def funcao_objetivo_pop_cv(populacao, cidades):
     """Computa a funcao objetivo de uma população no problema do caixeiro viajante.
     Args:
@@ -593,39 +589,32 @@ def funcao_objetivo_pop_cv(populacao, cidades):
     return resultado
 
 
+#Função de Suporte
+def distancia_entre_dois_pontos(a, b):
+    """Computa a distância Euclidiana entre dois pontos em R^2
+    Args:
+      a: lista contendo as coordenadas x e y de um ponto.
+      b: lista contendo as coordenadas x e y de um ponto.
+    Returns:
+      Distância entre as coordenadas dos pontos `a` e `b`.
+    """
+
+    x1 = a[0]
+    x2 = b[0]
+    y1 = a[1]
+    y2 = b[1]
+
+    dist = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** (1 / 2)
+
+    return dist
+
 
 #############################################################################
 ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento A.07 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
 #############################################################################
 
-def computa_mochila(individuo, objetos, ordem_dos_nomes):
-    """Computa o valor total e peso total de uma mochila
-    Args:
-      individiuo:
-        Lista binária contendo a informação de quais objetos serão selecionados.
-      objetos:
-        Dicionário onde as chaves são os nomes dos objetos e os valores são
-        dicionários com a informação do peso e valor.
-      ordem_dos_nomes:
-        Lista contendo a ordem dos nomes dos objetos.
-    Returns:
-      valor_total: valor total dos itens da mochila em unidades de dinheiros.
-      peso_total: peso total dos itens da mochila em unidades de massa.
-    """
 
-    valor_total=0
-    peso_total=0
-    
-    for pegou_o_item_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
-        if pegou_o_item_ou_nao == 1:
-            valor_do_item = objetos[nome_do_item]["valor"]
-            peso_do_item = objetos[nome_do_item]["peso"]
-            
-            valor_total = valor_total + valor_do_item
-            peso_total = peso_total + peso_do_item
-
-    return valor_total, peso_total
-
+#Função Objetivo
 def func_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
     """Computa a funcao objetivo de um candidato no problema da mochila.
     Args:
@@ -651,6 +640,7 @@ def func_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
         return valor_mochila
     
 
+#Função Objetivo da População
 def func_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
     """Computa a fun. objetivo de uma populacao no problema da mochila
     Args:
@@ -677,6 +667,8 @@ def func_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
 
     return resultado
 
+
+#Função Seleção
 def selecao_torneio_max(populacao, fitness, tamanho_torneio=3):
     """Faz a seleção de uma população usando torneio.
     Nota: da forma que está implementada, só funciona em problemas de
@@ -713,3 +705,181 @@ def selecao_torneio_max(populacao, fitness, tamanho_torneio=3):
         selecionados.append(selecionado)
 
     return selecionados
+
+
+#Função Suporte
+def computa_mochila(individuo, objetos, ordem_dos_nomes):
+    """Computa o valor total e peso total de uma mochila
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      valor_total: valor total dos itens da mochila em unidades de dinheiros.
+      peso_total: peso total dos itens da mochila em unidades de massa.
+    """
+
+    valor_total=0
+    peso_total=0
+    
+    for pegou_o_item_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
+        if pegou_o_item_ou_nao == 1:
+            valor_do_item = objetos[nome_do_item]["valor"]
+            peso_do_item = objetos[nome_do_item]["peso"]
+            
+            valor_total = valor_total + valor_do_item
+            peso_total = peso_total + peso_do_item
+
+    return valor_total, peso_total
+
+
+#############################################################################
+' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento GA.01 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
+#############################################################################
+
+#############################################################################
+' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento GA.02 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
+#############################################################################
+
+#############################################################################
+' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento GA.03 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
+#############################################################################
+
+#############################################################################
+' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Experimento GA.04 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ '
+#############################################################################
+
+#Função de Suporte
+def distancia_entre_dois_pontos_em_r3(a, b):
+    """Computa a distância Euclidiana entre dois pontos em R^3
+    Args:
+      a: lista contendo as coordenadas x, y e Z de um ponto.
+      b: lista contendo as coordenadas x, y e Z de um ponto.
+    Returns:
+      Distância entre as coordenadas dos pontos `a`, `b` em R^3.
+    """
+
+    x1 = a[0]
+    x2 = b[0]
+    
+    y1 = a[1]
+    y2 = b[1]
+    
+    z1 = a[2]
+    z2 = b[2]
+    
+    dist = ((x1 - x2) ** 2 + (y1 - y2) ** 2 + (z1 - z2) ** 2) ** (1 / 2)
+
+    return dist
+
+
+#Função Genoma
+
+def cria_cidades_em_r3(n):
+    """Cria um dicionário aleatório de cidades com suas posições (x,y e z).
+
+    Argumentos
+      n: inteiro positivo
+        Número de cidades que serão visitadas pelo caixeiro.
+
+    Retorno:
+      Dicionário contendo o nome das cidades como chaves e a coordenada no espaço cartesiano (R3) das cidades como valores.
+    """
+
+    cidades = {}
+
+    for i in range(n):
+        cidades[f"Cidade {i}"] = (random.random(), random.random(), random.random())
+
+    return cidades
+
+
+#Função Indivíduo
+"""
+Conforme Experimento A.06
+"""
+
+
+#Função População
+"""
+Conforme Experimento A.06
+"""
+
+
+#Função Cruzamento
+"""
+Conforme Experimento A.06
+"""      
+    
+#Função Seleção
+"""
+Conforme Experimento A.05
+"""
+
+
+#Função mutação
+"""
+Conforme Experimento A.06
+"""
+    
+#Função Objetivo
+def funcao_objetivo_ca(individuo, cidades):
+    """Computa a funcao objetivo de um individuo no problema do caixeiro astronauta.
+    Args:
+      individiuo:
+        Lista contendo a ordem das cidades que serão visitadas
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      A distância percorrida pelo caixeiro seguindo o caminho contido no
+      `individuo`. Lembrando que após percorrer todas as cidades em ordem, o
+      caixeiro retorna para a cidade original de onde começou sua viagem.
+    """
+
+    distancia = 0
+    
+    for posicao in range(len(individuo) -1):
+        
+        partida = cidades[individuo[posicao]]
+        chegada = cidades[individuo[posicao+1]]
+
+        percurso = distancia_entre_dois_pontos_em_r3(partida, chegada)
+        distancia = distancia + percurso
+        
+    # Calculando o caminho de volta para a cidade inicial
+    partida = cidades[individuo[-1]]
+    chegada = cidades[individuo[0]]
+    
+    percurso = distancia_entre_dois_pontos_em_r3(partida, chegada)
+    distancia = distancia + percurso
+    
+    return distancia
+
+
+#Função Objetivo População
+def funcao_objetivo_pop_ca(populacao, cidades):
+    """Computa a funcao objetivo de uma população no problema do caixeiro viajante.
+    Args:
+      populacao:
+        Lista com todos os inviduos da população
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      Lista contendo a distância percorrida pelo caixeiro para todos os
+      indivíduos da população.
+    """
+
+    resultado = []
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_ca(individuo, cidades))
+
+    return resultado
+
+
+

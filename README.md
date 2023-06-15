@@ -1,6 +1,6 @@
  # Redes Neurais e Algoritmos Genéticos
 
-Neste, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Redes Neurais e Algoritmos Genéticos" do curso Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência.
+Neste repositório, temos experimentos-aula desenvolidos durante o decorrer da disciplina "Redes Neurais e Algoritmos Genéticos" do curso Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência.
 
 
 <details><summary><h3>Da Organização</h3></summary>
